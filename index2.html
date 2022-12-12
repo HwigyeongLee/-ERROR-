@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Noto+Sans+KR:wght@300;500&family=Pinyon+Script&family=Rubik+Glitch&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{margin: 0;
+			padding: 0;
+			background: black;
+			overflow-x: hidden;
+			}
+		a {text-decoration-line: none;}
+		#container1{
+			height: 100vh;
+			width: 100vw;
+			background-image: url(glitchbackground.gif);
+			background-size: cover;}
+
+		#container2{
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			overflow: hidden;
+			background-image: url(glitchbackground.gif);
+			background-size: cover;
+		}
+		.ticker{position: absolute;overflow: hidden;}
+		#ticker1{
+			left: 0;top: 0vh;
+			width: 50vw;height: 5vh;
+			font-size: 2rem;line-height: 3.3rem;
+			background: lime;color: black;
+			transform-origin : 0 % 0 %;
+		}
+		#ticker2{
+			left: 50vw;top: 0vh;
+			width: 50vw;height: 5vh;
+			font-size: 2rem;line-height: 3.3rem;
+			background: black;color: white;
+			transform-origin : 0 % 0 %;
+		}
+		#realeaseDate{
+			padding-left: 10px;
+		}
+		#container21{
+			background: transparent;
+			height: 100vh;
+			width: 50vw;
+			padding-top: 200px;
+			font-family: 'Noto Sans KR', sans-serif;
+			color: white;
+			overflow: hidden;
+			text-shadow: #32a852 10px 0 20px;
+			background: black;
+		}
+		#albumIntro{
+			padding-left: 7vw;
+			padding-right: 7vw;
+			}
+		#pointFont{
+			font-family: 'Rubik Glitch', cursive;
+
+		}
+		#colortext{
+			color: lime;
+		}
+		#column{
+			column-count: 2;
+		}
+		#container22{
+			background: transparent;
+			height: 100vh;
+			width: 50vw;
+			display: flex;
+			overflow: hidden;
+			font-family: 'Noto Sans KR', sans-serif;
+			text-shadow: #32a852 10px 0 20px;
+			background: transparent;
+		}
+		#top{padding-top: 50px;
+			padding-left: 30px;
+			padding-right: 30px;
+			display: flex;
+   			justify-content: space-between;
+		} 
+		.header {
+            width: calc(100% - 60px);
+            position: fixed;
+            z-index: 9999;
+        }
+		#logopng{position: relative;
+			width: 100px;
+			height: 38.3632px;
+			}
+		#content{text-align: center;
+			padding-top: 25vh;
+		}
+		#menubar{display: flex;
+			}
+		#albumTitle{font-family: 'DM Serif Display', serif;
+			color: white;
+			font-size: 400px;
+			line-height: 230px;
+			}
+		
+		 #ERROR{
+		   display: inline-block;
+		   animation: stretch 1.25s cubic-bezier(0.4, 1.4, 0.75, 0.9) infinite, blur 8s ease-in-out infinite alternate;
+		   transform-origin: center;
+		}
+		 #ERROR:nth-of-type(1) {
+		   animation-delay: 0.25s;
+		}
+		 #ERROR:nth-of-type(3) {
+		   animation-delay: 0.5s;
+		}
+		 #ERROR:nth-of-type(2) {
+		   animation-delay: 0.75s;
+		}
+		 #ERROR:nth-of-type(5) {
+		   animation-delay: 1s;
+		}
+		 #ERROR:nth-of-type(4) {
+		   animation-delay: 1.25s;
+		}
+		 @keyframes stretch {
+		   5% {
+		     transform: scaleX(10000) scaleY(0.02);
+		     opacity: 0;
+
+		  }
+		   6% {
+		     transform: scaleX(1) scaleY(1);
+		     opacity: 1;
+		  }
+		} 
+		@keyframes blur {
+		    0%,40%, 50%, 60%, 90%, 95%, 100%{
+		        text-shadow:
+		        0px 0px 10px rgba(255,255,255,1),
+		        0px 0px 5px rgba(255,255,255,0),
+		        0px 0px 10px rgba(255,255,255,0),
+		        0px 0px 15px rgba(50, 168, 82, 1),
+		        0px 0px 20px rgba(255,255,255,0);
+		    }
+		    45%, 75% {
+		    text-shadow:
+		        0px 0px 10px rgba(255,255,255,1),
+		        0px 0px 5px rgba(255,255,255,1),
+		        0px 0px 10px rgba(255,255,255,1),
+		        0px 0px 15px rgba(50, 168, 82, 1),
+		        0px 0px 20px rgba(255,255,255,1);
+		    }
+		    
+		    97.5% {
+		    text-shadow:
+		        0px 0px 10px rgba(255,255,255,0),
+		        0px 0px 5px rgba(255,255,255,0),
+		        0px 0px 10px rgba(255,255,255,0),
+		        0px 0px 4px rgba(50, 168, 82, 1),
+		        0px 0px 20px rgba(255,255,255,0);
+		    }
+		}
+		
+		#errorIntro{color: white;
+			font-size: 50px;
+			text-shadow: #32a852 1px 0 10px;
+			font-family: 'DM Serif Display', serif;
+		}
+		footer{font-family: 'Noto Sans KR', sans-serif;
+			font-size: 13px;
+			text-shadow: #32a852 1px 0 10px;
+			color: white;
+			position: fixed;
+			top: 95vh;
+			left: calc(50vw - 130px);}
+		span.star{vertical-align: middle;}
+
+		#rollingtext{color: white;
+			text-transform: uppercase;
+			font-family: 'Noto Sans KR', sans-serif;
+			text-shadow: #32a852 1px 0 10px;
+			font-weight: 500;
+			font-size: 17px;}
+			
+		.main{
+		  height:100vh;
+		  width:100%;  
+		  padding-left: 30px;
+		  padding-top: 18vh;
+		  display:flex;
+		}
+
+		#tracklist{
+			font-size: 25px;
+		}
+
+		.roller{
+		  height: 20rem;
+		  
+		  position: relative;
+		  overflow: hidden; 
+		  width: 600px;
+		  display: flex;
+		  color: white;
+		}
+
+
+		.roller #rolltext {
+		  position: absolute;
+		  top: 0;
+		  animation: slide 15s infinite;  
+		}
+
+		@keyframes slide {
+		   0%{
+		    top:0;
+		  }
+		  25%{
+		    top: -4rem;    
+		  }
+		  50%{
+		    top: -8rem;
+		  }
+		  75%{
+		    top: -12.25rem;
+		  }
+		}
+
+		@media screen and (max-width: 2000px){
+		  
+		  .roller{
+		  height: 8rem; 
+		  line-height: 2.125rem;  
+		  }
+		  
+		
+		  .roller #rolltext {  
+		  animation: slide-mob 15s infinite;  
+		}
+		  
+		  @keyframes slide-mob {
+		  0%{
+		    top:0;
+		  }
+		  81.81%{
+		  	top: -15.5rem;
+		  }
+		  
+		}
+		.album{position: absolute;
+          display: block;
+          transition: all 1s;}
+        .rat{
+			position: absolute;}
+
+	</style>
+	<title></title>
+</head>
+<body>
+<div id="container2">
+		<div id="container21">
+
+			<div id="ticker1" class="ticker" data-speed="3" data-gap="480"><p><span>목격담 Siren 파노라마 Time! Stop! 당장 널 만나러 가지 않으면 마지막 인사 뭐가 부재중 전화 내 꿈의 성 A DAY 장례희망 </span></p></div>
+			<div id="albumIntro">
+
+			<h1 id="songtitle"><span id="pointFont">[ERROR] - 청음회</span></h1><br>
+			<p><span id="pointFont">AKMU</span> 이찬혁의 첫 솔로 정규 앨범, <span id="pointFont">[ERROR]</span>에 담긴 총 11곡은 하나의 이야기로 연결된다. 그 특유의 솔직한 감성과 철학적 사유, 유기적 구성이 돋보이는 가운데 삶에 대한 태도와 심리적 변화를 인상적으로 그려냈다.<br><br>
+	 		이야기는 어떤 <span id="colortext">사고(事故)</span>로부터 시작된다. 이 과정에서 이찬혁은 과거에 대한 후회, 현재에 마주한 모순, 그리고 미래를 향한 욕망을 날 것 그대로 담아냈다.<br><br>
+			각 트랙은 곡마다 다른 감정과 스타일로 청자의 마음을 파고든다. 듣는 재미뿐 아닌 메시지 전달력이 커 깊은 울림을 선사하기 충분하다.<br><br>							
+			3번 트랙에 배치된 타이틀곡 <span id="pointFont">'Panorama'</span>가 극의 정점이며, 6번 트랙 '마지막 인사'는 청하의 피처링으로 앨범 전체를 환기함과 동시에 서사를 더한다.<br><br>
+			<span id="pointFont">[ERROR]</span>의 컨셉아트가 재현된 온라인 공간에서, 앨범에 수록된 음원을 트랙별로 골라 감상할 수 있다.
+ 			</div>
+ 	
+		</div>
+		<div id="container22">
+			<div id="ticker2" class="ticker"><p><span id="realeaseDate"> 2022.10.17 6PM RELEASED 2022.10.17 6PM RELEASED 2022.10.17 6PM RELEASED </span></p></div>
+		</div>		
+		<footer>ⓒ2022 Hwigyeong Lee. All rights reserved.</footer>
+	</div>
+	<audio id="track1" src="track1.mp3"></audio> 
+	<audio id="track2" src="track2.mp3"></audio> 
+	<audio id="track3" src="track3.mp3"></audio> 
+	<audio id="track4" src="track4.mp3"></audio> 
+	<audio id="track5" src="track5.mp3"></audio> 
+	<audio id="track6" src="track6.mp3"></audio> 
+	<audio id="track7" src="track7.mp3"></audio> 
+	<audio id="track8" src="track8.mp3"></audio> 
+	<audio id="track9" src="track9.mp3"></audio> 
+	<audio id="track10" src="track10.mp3"></audio> 
+	<audio id="track11" src="track11.mp3"></audio> 
+	<script type="text/javascript">
+
+         let sizeWidth = 500;
+         let sizeHeight = 95;
+         let albumW = 100;
+
+         let albumBack = ["albumBack0","albumBack1","albumBack2","albumBack3","albumBack4","albumBack5","albumBack6","albumBack7","albumBack8","albumBack9","albumBack10"];
+        
+         for(let i=0; i<albumBack.length; i++){
+                 let t = document.createElement("img");
+                 t.className = "album";
+                 t.style.width = sizeHeight + "vh";
+                 t.style.height = sizeHeight + "vh";
+                 t.id = "al" + i;
+                 t.style.background = "black";
+
+                 t.style.background = "url(" + albumBack[i] + ".png)";
+                 t.style.backgroundSize = "cover";
+                 t.style.left = (sizeWidth + (i*albumW) + 590) + "px";
+                 t.style.top = "5vh";
+
+                t.dataset.open =  albumW*(i+1) + 200 ;
+                t.dataset.close = (sizeWidth + (i*albumW) + 590);
+                 t.onmouseover = function(e){
+                         e.target.style.left = e.target.dataset.open + "px";
+                 }
+                 t.onmouseout = function(e){
+                          e.target.style.left = e.target.dataset.close + "px";
+                 }
+                 container22.appendChild(t);
+           }
+
+
+        
+		al0.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track1.play();
+					albumIntro.innerHTML = "<p id='colortext'>(1) 이야기의 시작. 한 남자가 어느날 교통사고를 당한다.</p><h1 id='songtitle'><span id='pointFont'>목격담 (Eyewitness account)</span></h1><br>빛이 확 하는데<br>펑 하더니 <span id='pointFont'>superman</span>이 되었어요<br> 커다란 소리가 나더니<br> 막 웅성웅성했어요<br>처음에는 아무도 몰랐는데<br> 자세히 확인해 보니 <span id='pointFont'>TV</span>의<br><br> 악뮤 걔잖아 <span id='pointFont'>TV ooh</span><br> 악동 걔잖아 뮤지션<br> <span id='pointFont'>Ambulance 911 Police ooh</span><br> 불러 잠깐만 찰칵<br><br> 저 멀리서부터<br> 중앙선을 삐뚤빼뚤 왔어요<br> 사실 저 남자는<br> 파란불에 횡단도 잘했어요<br> 이미 일어난 일 그는 어떡해<br> 자세히 확인해 보니 <span id='pointFont'>TV</span>의<br><br> 악뮤 걔잖아 <span id='pointFont'>TV ooh</span><br> 악동 걔잖아 뮤지션<br> <span id='pointFont'>Ambulance 911 Police ooh</span><br> 불러 잠깐만 찰칵";
+				}
+		al1.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track2.play();
+					albumIntro.innerHTML = "<p id='colortext'>(2) 남자는 앰뷸런스에 태워진채로 병원으로 옮겨진다.</p><h1 id='songtitle'><span id='pointFont'>Siren</span></h1><br>숨을 쉬어 인마 정신 차려<br>거의 다 왔어 조금만 버티면 돼<br>눈을 떠 인마 보이지 나야<br>그래 우리 다 왔어 이렇게 손 꼭 잡고<br>안 비키는 건 다<br>밀고 가줘요 아저씨 제발<br>이러다 큰일 나<br><br>웽웽 <span id='pointFont'>Siren rings</span><br>위험해 이대론<br>웽웽 <span id='pointFont'>Siren rings</span><br>이렇겐 안 돼요<br><br>잠들지 마 인마 정신 차려<br>어제와 다르지 않은 하루인데<br>평화로운 도로가 불공평해<br>사이렌 소리에 머리가 터질 것 같아<br>방지턱도 다<br>무시해 줘요 아저씨 그냥<br>액셀을 더 밟아<br><br><br>웽웽 <span id='pointFont'>Siren rings</span><br>위험해 이대론<br>웽웽 <span id='pointFont'>Siren rings</span><br>이렇겐 안 돼요";}
+		al2.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track3.play();
+					albumIntro.innerHTML = "<p id='colortext'>(3) 희미한 의식만이 남아있는 남자. 스쳐가는 삶의 주마등, 이렇게 죽을 순 없어.</p><h1 id='songtitle'><span id='pointFont'>파노라마 (Panorama)</span></h1><br>머리가 깨질 것 같이<br>잠에서 일어나<br>악몽을 꾼 것 같은데<br><br>나를 둘러싼 사람들<br>고장 나버린 내 몸을 두고<br>저 돌팔이 의사가 사망선고를 하네<br><br>이렇게 죽을 순 없어<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼<br><br><span id='pointFont'>Oo-hoo<br>Oo-hoo</span><br>스쳐가네 파노라마처럼<br><br>난 분명 걷고 있었는데<br>마지막 기억이<br>한마디 뱉어야 하는데<br><br>심장이 점점 굳어가고<br>뒤집어엎는 가족들 왠지<br>이 코믹 같은 상황이 받아들여지네<br><br>이렇게 죽을 순 없어<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼<br><br>거짓말하지 마<br>꿈이잖아 깨워줘 당장<br>(놔두고 온 게 너무 많아)<br>이렇게 죽을 순 없어<br>Oo-hoo<br>Oo-hoo<br>스쳐가네 파노라마처럼<br><br>Oo-hoo<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼";}
+		al3.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track4.play();
+					albumIntro.innerHTML = "<p id='colortext'>(4) 죽어가는 순간 시간이 멈추기를 기도한다.</p><h1 id='songtitle'><span id='pointFont'>Time! Stop!</span></h1><br>딱 한 번만 마지막 기회를 줘<br>신이시여 도대체 내가 뭘 잘못했는지<br>시간아 잠시만 멈춰서 내 모든<br>후회를 막아줘<br>이건 견딜만한 시련이 아닌걸<br>다 두고 떠날 마음은<br>사실 생각해 본 적도 없는데<br><br><span id='pointFont'>Time! Stop!</span><br>희미해지는 심장 소리<br><span id='pointFont'>Time! Stop!</span><br>돌아가고 싶었던 시간을<br>간절히 두 눈을 감고서<br>바란다면 그곳에 있을까<br>간절히 두 손을 모으고서<br>기도하면 바뀔 수 있을까<br>시간아 날 멈춰줘 제발<br><br>딱 하루만 더 숨 쉬게 해줘<br>동아줄이 끊기지 않길 바라는 것처럼<br>나의 마지막이 아등바등 이리<br>볼품없을 줄이야<br>커튼콜같이 박수 눈물 속에<br>막을 내리는 꿈은<br>사실 여러 번 상상했었는데<br><br><span id='pointFont'>Time! Stop!</span><br>희미해지는 심장 소리<br><span id='pointFont'>Time! Stop!</span><br>돌아가고 싶었던 시간을<br>간절히 두 눈을 감고서<br>바란다면 그곳에 있을까<br>간절히 두 손을 모으고서<br>기도하면 바뀔 수 있을까<br>시간아 날 멈춰줘 제발<br><br>간절히 두 눈을 감고서<br>간절히 두 손을 모으고서<br>누군가 날 원한다면<br>기도하면 바뀔 수 있을까<br>시간아 날 멈춰줘 제발";}
+		al4.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track5.play();
+					albumIntro.innerHTML = "<p id='colortext'>(5) 딱 하루가 더 주어진 그 남자는 당장 그녀를 보러 달려간다. </p><h1 id='songtitle'><span id='pointFont'>당장 널 만나러 가지 않으면</span></h1><br>눈을 뜨고 제일 먼저<br>떠오르는 건 <span id='pointFont'>It’s you</span><br>시리얼에 우유를<br>부을 때조차 <span id='pointFont'>It’s you</span><br>창문을 열었는데<br>뭉게뭉게 구름이<br>변하더니 네 얼굴이 보여<br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어<br><br>이럴 계획은 없었는데 <span id='pointFont'>Yeah</span><br>우선순위를 정하고 싶어<br>다른 것을 다 제쳐두더라도<br>널 보고 싶어 <span id='pointFont'>(I miss you)</span><br>옷장을 열었는데<br>멋진 가죽 재킷이<br>날 껴안고 속삭이네<br><span id='pointFont'>Let’s go</span><br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어<br><br>너에게 전화를 걸어 받아줘<br>바빠도 잠시만 시간을 내줘<br>해야 할 말이 있어 나 지금<br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어";}
+		al5.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track6.play();
+					albumIntro.innerHTML = "<p id='colortext'>(6) 떠나기 전 그녀에게 마지막 인사를 건네는 남자.<br>잘 지내. 행복했었어. 너 덕분에.</p><h1 id='songtitle'><span id='pointFont'>마지막 인사 (feat.청하)</span></h1><br>사람이 어쩜 그래 넌<br>다신 안 볼 것처럼 말하더니<br>이제 와서 나밖에 없다고<br>나랑 뭐 하자는 거야<br><br>나도 예상은 못 했어<br>네가 가장 먼저 떠오른걸<br>나 오늘 떠나 이젠 영영<br>못 볼 거니까 마지막으로<br><br>착각하지 마 아무것도 바뀌지 않아<br>그냥 인사만 하는 거야<br><br>잘 가 잘 있어<br>행복했었어<br>고마웠어 뭐가<br>사랑<br><br>그래서 원하는 게 뭔데<br>고작 이러려고 찾아온 거니<br>큰맘이라도 먹은 줄 알았는데<br>너 정말 형편없구나<br><br>형편없다 말해도 좋아<br>모든 걸 돌이킬 순 없지만<br>자존심이 많은 걸 망쳤잖아 우리<br>지금 난 알아<br><br>무슨 짓인지 왜 그런 눈빛을 하는지<br>Oh 난 이해하지 않을 거야<br><br>잘 가 잘 있어<br>행복했었어<br>고마웠어 뭐가<br>사랑<br><br>미련했나 봐 (그러지 마)<br>내 잘못이야 (하지 마)<br>그리울 거야 (그리울 거야)<br>사랑";}
+		al6.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track7.play();
+					albumIntro.innerHTML = "<p id='colortext'>(7) 죽음을 눈앞에 둔 그 남자는, 잃고싶지 않은 것들이 너무나도 많다.</p><h1 id='songtitle'><span id='pointFont'>뭐가 (What The))</span></h1><br>언제든 떠날 채빌 했지만<br>난 여태 거짓말을 해왔네<br>미련이 이만큼 남을 줄이야<br>그때부터 욕심만 커져 왔던 걸까<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네<br><br>항상 두려운 것 없이<br>살아온 줄 알았는데<br>어느새 이렇게 많이 생겼을 줄이야<br>잃고 싶지 않은 게 이만큼<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네";}
+		al7.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track8.play();
+					albumIntro.innerHTML = "<p id='colortext'>(8) 익숙함에 속아 소중함을 잊었던 과거가 후회스럽다.</p><h1 id='songtitle'><span id='pointFont'>부재중 전화</span></h1><br>많고 많은 사람들<br>나를 스쳐 갔지만<br>왠지 지금까지<br>혼자 살아온 것 같아<br><br>외로운 밤 누워서<br>한 명이라도 이 순간<br>함께 할 수 있을까<br>통화 목록을 뒤적이다가<br>뒤적이다가<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화<br><br>바쁜 일과 속에서<br>뒤로 밀려나 있던<br>사실 바쁘지 않은 때도<br>그랬던 거 같아<br>나를 스쳐 가지 않은 것도 있었네<br>혼자 남겨졌다고 생각했는데<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화";}
+		al8.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track9.play();
+					albumIntro.innerHTML = "<p id='colortext'>(9) 죽음을 경험한 남자는 스스로가 진짜 욕망했던 것이 무엇인지 깨달았다.</p><h1 id='songtitle'><span id='pointFont'>내 꿈의 성</span></h1><br>아무도 모르게<br>꿈꿔왔네 거대한 성을<br>나조차 스스로도 모르게<br>남몰래 견고하게<br>쌓아 올렸네 꿈의 성을<br>차근차근 한 단계 한 단계<br>늘 겸손 하라 했지만<br>난 왕이 되고팠던 거야<br>욕심이 없다 했지만<br>난 정복을 원했던 거야<br><br>내 꿈의 성<br>먼 훗날 그곳을 위해서라면<br>나 외로워서 메말라버려도 좋아<br>내 꿈의 성<br>단 한 사람 내게 남아 준다면<br>그곳에서 우리 세상을 만들 거야<br><br>옳지 옳지 착하지<br>그것을 난 벗어야 했네<br>날 강하게 가둔 액자에서<br>그저 그런 사람에겐<br>관심이 점점 떨어지고<br>함께 갈 사람만 보이네<br>이웃을 사랑하고 싶어<br>하지만 그게 도대체가<br>난 정말 사랑을 알까<br>알고 싶기는 한 걸까<br><br>내 꿈의 성<br>먼 훗날 그곳을 위해서라면<br>나 외로워서 메말라버려도 좋아<br>내 꿈의 성<br>단 한 사람 내게 남아준다면<br>그곳에서 우리 세상을 만들 거야<br>내 꿈 내 꿈 내 꿈의 성<br>내 꿈 내 꿈 내 꿈의 성<br>쉬지 않고 달린 이유<br>숨겨왔던 내 욕심을 밝히고<br>난 떠날래 꿈속으로";}
+		al9.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track10.play();
+					albumIntro.innerHTML = "<p id='colortext'>(10) 우리는 감정에 솔직해져야해 내일은 없으니까.</p><h1 id='songtitle'><span id='pointFont'>A Day</span></h1><br><div id='column'><span id='pointFont'>A DAY</span><br>날이 저물어 가네<br>우린 솔직해져야 해<br>내일이 없기 때문에<br><span id='pointFont'>A DAY</span><br>I have only a day</span><br>좀 더 사랑해 줘야 해<br>얼굴을 바라봐야 해<br><br><span id='pointFont'>A DAY</span><br>우린 짧은 것에<br>아름다움을 느끼네<br>노을 불씨 목숨처럼<br>그 모든 건 참 아쉽네<br>언제 내 삶이 끝나도<br>아쉬울 게 없다고 했던<br>그때의 난 사실 잘난 체를 했었네<br><span id='pointFont'>Now I realise<br><br>Baby<br>I can’t waste it</span><br>왜 그렇게 아꼈었는지<br>사랑한다 함께 하자는 말<br><span id='pointFont'>Baby<br>I can’t stand it</span><br>왜 눈물을 참았었는지<br>뜨거운 안녕 <span id='pointFont'>Goodbye<br><br>A DAY</span><br>날이 저물어 가네<br>우린 솔직해져야 해<br>내일이 없기 때문에<br><br><span id='pointFont'>Ooh</span> 웃어넘겼던 것들이 소중하네<br><span id='pointFont'>Ooh</span> 스쳐 갔던 얼굴들이 보고 싶네<br>평생을 길바닥에서<br>살아도 좋겠다 했던<br>그때 내 말은 참 재수가 없었겠다<br><span id='pointFont'>Now I realise<br><br>Baby<br>I can’t waste it</span><<br>왜 고상을 떨었었는지<br>함께 소란 부리잔 네 말에<br><span id='pointFont'>Baby<br>I can’t stand it</span><br>이제야 네게 말하는<br>마지막 문장 <span id='pointFont'>Love you</span><br><br><span id='pointFont'>A DAY</span><br>날이 저물어 가네<br>우린 솔직해져야 해<br>내일이 없기 때문에<br><span id='pointFont'>A DAY<br>I have only a day</span><br>좀 더 사랑해 줘야 해<br>얼굴을 바라봐야 해<br><br><span id='pointFont'>A DAY</span><br>날이 저물어 가네<br>우린 솔직해져야 해<br>내일이 없기 때문에<br><span id='pointFont'>A DAY<br>I have only a day</span><br>좀 더 사랑해 줘야 해<br>얼굴을 바라봐야 해</div>";}
+		al10.onclick = function(){
+					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
+					track11.play();
+					albumIntro.innerHTML = "<p id='colortext'>(11) 그 남자는 장례식에 축하와 환호성이 있기를 바랬다. 왜냐하면 그는 천국에 있을 것이기 때문에.</p><h1 id='songtitle'><span id='pointFont'>장례희망 (Funeral Hope)</span></h1><br><div id='column'>아는 얼굴 다 모였네 여기에<br>한 공간에 다 있는 게 신기해<br>모르는 사람이 계속 우는데<br>누군지 기억이 안 나 미안해<br>종종 상상했던 내 장례식엔<br>축하와 환호성 또 박수갈채가<br>있는 파티가 됐으면 했네<br>왜냐면 난 천국에 있기 때문에<br>오자마자 내 몸집에 서너 배<br>커다란 사자와 친구를 먹었네<br>땅 위에 단어들로는 표현 못 해<br>사진을 못 보내는 게 아쉽네<br><br>모두 여기서<br>다시 볼 거라는<br>확신이 있네<br>내 맘을 다 전하지<br>못한 게 아쉽네<br><br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>함께 일어나 춤을 추고 뛰며 찬양해<br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>큰 목소리로 기뻐 손뼉 치며 외치세<br><br>나와 그닥 뭐가 없던 여자의<br>슬픔이 좀 과하게 보이길래<br>놀랐네 돌이켜보니 그러게<br>우리도 미묘한 신호가 있긴 했네<br>머리를 쾅 한 대 맞은 듯하네<br>이제 머리는 없지만 알기 쉽게<br>모든 걸 알지 못했기 때문에<br>뭣 같고 즐거웠어 삶이란 게<br>한쪽엔 내가 생전 좋아했던<br>음식들이 놓였네 마치 뷔페<br>꾸준히 당부해 두길 잘했네<br>좋은 기억으로 남겨주길 바라<br><br>모두 여기서<br>다시 볼 거라는<br>확신이 있네<br>내 맘을 다 전하지<br>못한 게 아쉽네<br><br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>함께 일어나 춤을 추고 뛰며 찬양해<br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>큰 목소리로 기뻐 손뼉 치며 외치세</div>";}
+
+        
+		bhTicker("ticker",2);
+
+function bhTicker(cl,speed) {
+	let t = document.getElementsByClassName(cl);
+	let ta = []; let ts=[]; let tg=[]; let tw=[];
+	let container,mover,text,textWidth;
+
+	for(let i=0; i<t.length; i++){
+		container = t[i];
+		mover = container.getElementsByTagName("p").item(0);
+		text = mover.getElementsByTagName("span").item(0);
+
+		mover.style.position = "absolute";
+		mover.style.margin = "0 0 0 0";
+		mover.style.left = "0px";
+		mover.leftPosition = 0;
+		mover.style.width = text.childNodes.item(0).length + "em";	// stretch width
+		textWidth = text.offsetWidth;
+
+		let speed2 = t[i].dataset.speed;
+		if (textWidth > container.offsetWidth) {
+			if(speed2 == 1){speed2 = 2};
+			mover.style.width = textWidth * speed2 + "px";
+			
+			for(let k=0;k<speed2;k++){
+				mover.innerHTML += mover.innerHTML;	
+			}
+		}
+
+		tw.push(textWidth);
+		tg.push(t[i].dataset.gap);
+		ts.push(t[i].dataset.speed);
+		ta.push(mover);
+	}
+
+	let tickerAction = function() {
+		for(let j=0;j<ta.length;j++){
+			let speed = parseInt(ts[j]);
+			let gap = parseInt(tg[j]);
+			let tw2 = tw[j];
+
+			if (ta[j].leftPosition * -speed > tw2*speed) {
+				ta[j].leftPosition = -speed;
+			} else {
+				ta[j].leftPosition -= speed;
+			}
+
+			ta[j].style.left = (-gap + ta[j].leftPosition) + "px";
+		}
+		window.requestAnimationFrame(tickerAction);
+	};
+	tickerAction();
+}
+
+	
+  	
+  
+		
+		
+	</script>
+</body>
+</html>
