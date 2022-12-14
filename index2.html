@@ -9,6 +9,7 @@
 			padding: 0;
 			background: black;
 			overflow-x: hidden;
+			font-family: 'Noto Sans KR', sans-serif;
 			}
 		a {text-decoration-line: none;}
 		#container1{
@@ -47,7 +48,7 @@
 			background: transparent;
 			height: 100vh;
 			width: 50vw;
-			padding-top: 7vw;
+			padding-top: 200px;
 			font-family: 'Noto Sans KR', sans-serif;
 			color: white;
 			overflow: hidden;
@@ -254,7 +255,10 @@
           transition: all 1s;}
         .rat{
 			position: absolute;}
-        
+	img{
+		 display: inline-block;
+    		content: ""
+	}
 
 	</style>
 	<title></title>
@@ -328,16 +332,16 @@
 		al0.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track1.play();
-					albumIntro.innerHTML = "<p id='colortext'>(1) 이야기의 시작. 한 남자가 어느날 교통사고를 당한다.</p><h1 id='songtitle'><span id='pointFont'>목격담 (Eyewitness account)</span></h1><br>빛이 확 하는데<br>펑 하더니 <span id='pointFont'>superman</span>이 되었어요<br> 커다란 소리가 나더니<br> 막 웅성웅성했어요<br>처음에는 아무도 몰랐는데<br> 자세히 확인해 보니 <span id='pointFont'>TV</span>의<br><br> 악뮤 걔잖아 <span id='pointFont'>TV ooh</span><br> 악동 걔잖아 뮤지션<br> <span id='pointFont'>Ambulance 911 Police ooh</span><br> 불러 잠깐만 찰칵<br><br> 저 멀리서부터<br> 중앙선을 삐뚤빼뚤 왔어요<br> 사실 저 남자는<br> 파란불에 횡단도 잘했어요<br> 이미 일어난 일 그는 어떡해<br> 자세히 확인해 보니 <span id='pointFont'>TV</span>의<br><br> 악뮤 걔잖아 <span id='pointFont'>TV ooh</span><br> 악동 걔잖아 뮤지션<br> <span id='pointFont'>Ambulance 911 Police ooh</span><br> 불러 잠깐만 찰칵";
+					albumIntro.innerHTML = "<p id='colortext'>(1) 이야기의 시작. 한 남자가 어느날 교통사고를 당한다.</p><h1 id='songtitle'>목격담 <span id='pointFont'>(Eyewitness account)</span></h1><br>빛이 확 하는데<br>펑 하더니 <span id='pointFont'>superman</span>이 되었어요<br> 커다란 소리가 나더니<br> 막 웅성웅성했어요<br>처음에는 아무도 몰랐는데<br> 자세히 확인해 보니 <span id='pointFont'>TV</span>의<br><br> 악뮤 걔잖아 <span id='pointFont'>TV ooh</span><br> 악동 걔잖아 뮤지션<br> <span id='pointFont'>Ambulance 911 Police ooh</span><br> 불러 잠깐만 찰칵<br><br> 저 멀리서부터<br> 중앙선을 삐뚤빼뚤 왔어요<br> 사실 저 남자는<br> 파란불에 횡단도 잘했어요<br> 이미 일어난 일 그는 어떡해<br> 자세히 확인해 보니 <span id='pointFont'>TV</span>의<br><br> 악뮤 걔잖아 <span id='pointFont'>TV ooh</span><br> 악동 걔잖아 뮤지션<br> <span id='pointFont'>Ambulance 911 Police ooh</span><br> 불러 잠깐만 찰칵";
 				}
 		al1.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track2.play();
-					albumIntro.innerHTML = "<p id='colortext'>(2) 남자는 앰뷸런스에 태워진채로 병원으로 옮겨진다.</p><h1 id='songtitle'><span id='pointFont'>Siren</span></h1><br>숨을 쉬어 인마 정신 차려<br>거의 다 왔어 조금만 버티면 돼<br>눈을 떠 인마 보이지 나야<br>그래 우리 다 왔어 이렇게 손 꼭 잡고<br>안 비키는 건 다<br>밀고 가줘요 아저씨 제발<br>이러다 큰일 나<br><br>웽웽 <span id='pointFont'>Siren rings</span><br>위험해 이대론<br>웽웽 <span id='pointFont'>Siren rings</span><br>이렇겐 안 돼요<br><br>잠들지 마 인마 정신 차려<br>어제와 다르지 않은 하루인데<br>평화로운 도로가 불공평해<br>사이렌 소리에 머리가 터질 것 같아<br>방지턱도 다<br>무시해 줘요 아저씨 그냥<br>액셀을 더 밟아<br><br><br>웽웽 <span id='pointFont'>Siren rings</span><br>위험해 이대론<br>웽웽 <span id='pointFont'>Siren rings</span><br>이렇겐 안 돼요";}
+					albumIntro.innerHTML = "<p id='colortext'>(2) 남자는 앰뷸런스에 태워진채로 병원으로 옮겨진다.</p><h1 id='songtitle'><span id='pointFont'>Siren</span></h1><br><div id='column'>숨을 쉬어 인마 정신 차려<br>거의 다 왔어 조금만 버티면 돼<br>눈을 떠 인마 보이지 나야<br>그래 우리 다 왔어 이렇게 손 꼭 잡고<br>안 비키는 건 다<br>밀고 가줘요 아저씨 제발<br>이러다 큰일 나<br><br>웽웽 <span id='pointFont'>Siren rings</span><br>위험해 이대론<br>웽웽 <span id='pointFont'>Siren rings</span><br>이렇겐 안 돼요<br><br>잠들지 마 인마 정신 차려<br>어제와 다르지 않은 하루인데<br>평화로운 도로가 불공평해<br>사이렌 소리에 머리가 터질 것 같아<br>방지턱도 다<br>무시해 줘요 아저씨 그냥<br>액셀을 더 밟아<br><br><br>웽웽 <span id='pointFont'>Siren rings</span><br>위험해 이대론<br>웽웽 <span id='pointFont'>Siren rings</span><br>이렇겐 안 돼요</div>";}
 		al2.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track3.play();
-					albumIntro.innerHTML = "<p id='colortext'>(3) 희미한 의식만이 남아있는 남자. 스쳐가는 삶의 주마등, 이렇게 죽을 순 없어.</p><h1 id='songtitle'><span id='pointFont'>파노라마 (Panorama)</span></h1><br><div id='column'>머리가 깨질 것 같이<br>잠에서 일어나<br>악몽을 꾼 것 같은데<br><br>나를 둘러싼 사람들<br>고장 나버린 내 몸을 두고<br>저 돌팔이 의사가 사망선고를 하네<br><br>이렇게 죽을 순 없어<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼<br><br><span id='pointFont'>Oo-hoo<br>Oo-hoo</span><br>스쳐가네 파노라마처럼<br><br>난 분명 걷고 있었는데<br>마지막 기억이<br>한마디 뱉어야 하는데<br><br>심장이 점점 굳어가고<br>뒤집어엎는 가족들 왠지<br>이 코믹 같은 상황이 받아들여지네<br><br>이렇게 죽을 순 없어<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼<br><br>거짓말하지 마<br>꿈이잖아 깨워줘 당장<br>(놔두고 온 게 너무 많아)<br>이렇게 죽을 순 없어<br>Oo-hoo<br>Oo-hoo<br>스쳐가네 파노라마처럼<br><br>Oo-hoo<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(3) 희미한 의식만이 남아있는 남자. 스쳐가는 삶의 주마등, 이렇게 죽을 순 없어.</p><h1 id='songtitle'>파노라마 <span id='pointFont'>(Panorama)</span></h1><br><div id='column'>머리가 깨질 것 같이<br>잠에서 일어나<br>악몽을 꾼 것 같은데<br><br>나를 둘러싼 사람들<br>고장 나버린 내 몸을 두고<br>저 돌팔이 의사가 사망선고를 하네<br><br>이렇게 죽을 순 없어<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼<br><br><span id='pointFont'>Oo-hoo<br>Oo-hoo</span><br>스쳐가네 파노라마처럼<br><br>난 분명 걷고 있었는데<br>마지막 기억이<br>한마디 뱉어야 하는데<br><br>심장이 점점 굳어가고<br>뒤집어엎는 가족들 왠지<br>이 코믹 같은 상황이 받아들여지네<br><br>이렇게 죽을 순 없어<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼<br><br>거짓말하지 마<br>꿈이잖아 깨워줘 당장<br>(놔두고 온 게 너무 많아)<br>이렇게 죽을 순 없어<br>Oo-hoo<br>Oo-hoo<br>스쳐가네 파노라마처럼<br><br>Oo-hoo<br>버킷리스트 다 해봐야 해<br>짧은 인생 쥐뿔도 없는 게<br>스쳐가네 파노라마처럼</div>";}
 		al3.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track4.play();
@@ -345,23 +349,23 @@
 		al4.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track5.play();
-					albumIntro.innerHTML = "<p id='colortext'>(5) 딱 하루가 더 주어진 그 남자는 당장 그녀를 보러 달려간다. </p><h1 id='songtitle'><span id='pointFont'>당장 널 만나러 가지 않으면</span></h1><br><div id='column'>눈을 뜨고 제일 먼저<br>떠오르는 건 <span id='pointFont'>It’s you</span><br>시리얼에 우유를<br>부을 때조차 <span id='pointFont'>It’s you</span><br>창문을 열었는데<br>뭉게뭉게 구름이<br>변하더니 네 얼굴이 보여<br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어<br><br>이럴 계획은 없었는데 <span id='pointFont'>Yeah</span><br>우선순위를 정하고 싶어<br>다른 것을 다 제쳐두더라도<br>널 보고 싶어 <span id='pointFont'>(I miss you)</span><br>옷장을 열었는데<br>멋진 가죽 재킷이<br>날 껴안고 속삭이네<br><span id='pointFont'>Let’s go</span><br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어<br><br>너에게 전화를 걸어 받아줘<br>바빠도 잠시만 시간을 내줘<br>해야 할 말이 있어 나 지금<br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(5) 딱 하루가 더 주어진 그 남자는 당장 그녀를 보러 달려간다. </p><h1 id='songtitle'>당장 널 만나러 가지 않으면</h1><br><div id='column'>눈을 뜨고 제일 먼저<br>떠오르는 건 <span id='pointFont'>It’s you</span><br>시리얼에 우유를<br>부을 때조차 <span id='pointFont'>It’s you</span><br>창문을 열었는데<br>뭉게뭉게 구름이<br>변하더니 네 얼굴이 보여<br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어<br><br>이럴 계획은 없었는데 <span id='pointFont'>Yeah</span><br>우선순위를 정하고 싶어<br>다른 것을 다 제쳐두더라도<br>널 보고 싶어 <span id='pointFont'>(I miss you)</span><br>옷장을 열었는데<br>멋진 가죽 재킷이<br>날 껴안고 속삭이네<br><span id='pointFont'>Let’s go</span><br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어<br><br>너에게 전화를 걸어 받아줘<br>바빠도 잠시만 시간을 내줘<br>해야 할 말이 있어 나 지금<br><br>당장 널 만나러 가지 않으면<br>오늘 하루가 손톱만큼도 의미 없어<br>네게 달려가지 않으면<br>오늘 내 몸이 제 역할을 한 적이 없어</div>";}
 		al5.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track6.play();
-					albumIntro.innerHTML = "<p id='colortext'>(6) 떠나기 전 그녀에게 마지막 인사를 건네는 남자.<br>잘 지내. 행복했었어. 너 덕분에.</p><h1 id='songtitle'><span id='pointFont'>마지막 인사 (feat.청하)</span></h1><br><div id='column'>사람이 어쩜 그래 넌<br>다신 안 볼 것처럼 말하더니<br>이제 와서 나밖에 없다고<br>나랑 뭐 하자는 거야<br><br>나도 예상은 못 했어<br>네가 가장 먼저 떠오른걸<br>나 오늘 떠나 이젠 영영<br>못 볼 거니까 마지막으로<br><br>착각하지 마 아무것도 바뀌지 않아<br>그냥 인사만 하는 거야<br><br>잘 가 잘 있어<br>행복했었어<br>고마웠어 뭐가<br>사랑<br><br>그래서 원하는 게 뭔데<br>고작 이러려고 찾아온 거니<br>큰맘이라도 먹은 줄 알았는데<br>너 정말 형편없구나<br><br>형편없다 말해도 좋아<br>모든 걸 돌이킬 순 없지만<br>자존심이 많은 걸 망쳤잖아 우리<br>지금 난 알아<br><br>무슨 짓인지 왜 그런 눈빛을 하는지<br>Oh 난 이해하지 않을 거야<br><br>잘 가 잘 있어<br>행복했었어<br>고마웠어 뭐가<br>사랑<br><br>미련했나 봐 (그러지 마)<br>내 잘못이야 (하지 마)<br>그리울 거야 (그리울 거야)<br>사랑</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(6) 떠나기 전 그녀에게 마지막 인사를 건네는 남자.<br>잘 지내. 행복했었어. 너 덕분에.</p><h1 id='songtitle'>마지막 인사 <span id='pointFont'>(feat.</span>청하<span id='pointFont'>)</span></h1><br><div id='column'>사람이 어쩜 그래 넌<br>다신 안 볼 것처럼 말하더니<br>이제 와서 나밖에 없다고<br>나랑 뭐 하자는 거야<br><br>나도 예상은 못 했어<br>네가 가장 먼저 떠오른걸<br>나 오늘 떠나 이젠 영영<br>못 볼 거니까 마지막으로<br><br>착각하지 마 아무것도 바뀌지 않아<br>그냥 인사만 하는 거야<br><br>잘 가 잘 있어<br>행복했었어<br>고마웠어 뭐가<br>사랑<br><br>그래서 원하는 게 뭔데<br>고작 이러려고 찾아온 거니<br>큰맘이라도 먹은 줄 알았는데<br>너 정말 형편없구나<br><br>형편없다 말해도 좋아<br>모든 걸 돌이킬 순 없지만<br>자존심이 많은 걸 망쳤잖아 우리<br>지금 난 알아<br><br>무슨 짓인지 왜 그런 눈빛을 하는지<br>Oh 난 이해하지 않을 거야<br><br>잘 가 잘 있어<br>행복했었어<br>고마웠어 뭐가<br>사랑<br><br>미련했나 봐 (그러지 마)<br>내 잘못이야 (하지 마)<br>그리울 거야 (그리울 거야)<br>사랑</div>";}
 		al6.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track7.play();
-					albumIntro.innerHTML = "<p id='colortext'>(7) 죽음을 눈앞에 둔 그 남자는, 잃고싶지 않은 것들이 너무나도 많다.</p><h1 id='songtitle'><span id='pointFont'>뭐가 (What The))</span></h1><br><div id='column'>언제든 떠날 채빌 했지만<br>난 여태 거짓말을 해왔네<br>미련이 이만큼 남을 줄이야<br>그때부터 욕심만 커져 왔던 걸까<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네<br><br>항상 두려운 것 없이<br>살아온 줄 알았는데<br>어느새 이렇게 많이 생겼을 줄이야<br>잃고 싶지 않은 게 이만큼<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(7) 죽음을 눈앞에 둔 그 남자는, 잃고싶지 않은 것들이 너무나도 많다.</p><h1 id='songtitle'>뭐가 <span id='pointFont'>(What The)</span></h1><br><div id='column'>언제든 떠날 채빌 했지만<br>난 여태 거짓말을 해왔네<br>미련이 이만큼 남을 줄이야<br>그때부터 욕심만 커져 왔던 걸까<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네<br><br>항상 두려운 것 없이<br>살아온 줄 알았는데<br>어느새 이렇게 많이 생겼을 줄이야<br>잃고 싶지 않은 게 이만큼<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네<br><br>뭐가 사랑이고<br>뭐가 영원이야<br>나는 그렇게 살지 못했네<br>후회만 남았네</div>";}
 		al7.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track8.play();
-					albumIntro.innerHTML = "<p id='colortext'>(8) 익숙함에 속아 소중함을 잊었던 과거가 후회스럽다.</p><h1 id='songtitle'><span id='pointFont'>부재중 전화</span></h1><br><div id='column'>많고 많은 사람들<br>나를 스쳐 갔지만<br>왠지 지금까지<br>혼자 살아온 것 같아<br><br>외로운 밤 누워서<br>한 명이라도 이 순간<br>함께 할 수 있을까<br>통화 목록을 뒤적이다가<br>뒤적이다가<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화<br><br>바쁜 일과 속에서<br>뒤로 밀려나 있던<br>사실 바쁘지 않은 때도<br>그랬던 거 같아<br>나를 스쳐 가지 않은 것도 있었네<br>혼자 남겨졌다고 생각했는데<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(8) 익숙함에 속아 소중함을 잊었던 과거가 후회스럽다.</p><h1 id='songtitle'>부재중 전화</h1><br><div id='column'>많고 많은 사람들<br>나를 스쳐 갔지만<br>왠지 지금까지<br>혼자 살아온 것 같아<br><br>외로운 밤 누워서<br>한 명이라도 이 순간<br>함께 할 수 있을까<br>통화 목록을 뒤적이다가<br>뒤적이다가<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화<br><br>바쁜 일과 속에서<br>뒤로 밀려나 있던<br>사실 바쁘지 않은 때도<br>그랬던 거 같아<br>나를 스쳐 가지 않은 것도 있었네<br>혼자 남겨졌다고 생각했는데<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화<br><br>언제 왔었는지<br>빨갛게 남겨진<br>며칠 전 엄마의 부재중 전화<br>늦은 밤 다시 걸기엔<br>민망해져 버린<br>오래된 부재중 전화</div>";}
 		al8.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track9.play();
-					albumIntro.innerHTML = "<p id='colortext'>(9) 죽음을 경험한 남자는 스스로가 진짜 욕망했던 것이 무엇인지 깨달았다.</p><h1 id='songtitle'><span id='pointFont'>내 꿈의 성</span></h1><br><div id='column'>아무도 모르게<br>꿈꿔왔네 거대한 성을<br>나조차 스스로도 모르게<br>남몰래 견고하게<br>쌓아 올렸네 꿈의 성을<br>차근차근 한 단계 한 단계<br>늘 겸손 하라 했지만<br>난 왕이 되고팠던 거야<br>욕심이 없다 했지만<br>난 정복을 원했던 거야<br><br>내 꿈의 성<br>먼 훗날 그곳을 위해서라면<br>나 외로워서 메말라버려도 좋아<br>내 꿈의 성<br>단 한 사람 내게 남아 준다면<br>그곳에서 우리 세상을 만들 거야<br><br>옳지 옳지 착하지<br>그것을 난 벗어야 했네<br>날 강하게 가둔 액자에서<br>그저 그런 사람에겐<br>관심이 점점 떨어지고<br>함께 갈 사람만 보이네<br>이웃을 사랑하고 싶어<br>하지만 그게 도대체가<br>난 정말 사랑을 알까<br>알고 싶기는 한 걸까<br><br>내 꿈의 성<br>먼 훗날 그곳을 위해서라면<br>나 외로워서 메말라버려도 좋아<br>내 꿈의 성<br>단 한 사람 내게 남아준다면<br>그곳에서 우리 세상을 만들 거야<br>내 꿈 내 꿈 내 꿈의 성<br>내 꿈 내 꿈 내 꿈의 성<br>쉬지 않고 달린 이유<br>숨겨왔던 내 욕심을 밝히고<br>난 떠날래 꿈속으로</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(9) 죽음을 경험한 남자는 스스로가 진짜 욕망했던 것이 무엇인지 깨달았다.</p><h1 id='songtitle'>내 꿈의 성</h1><br><div id='column'>아무도 모르게<br>꿈꿔왔네 거대한 성을<br>나조차 스스로도 모르게<br>남몰래 견고하게<br>쌓아 올렸네 꿈의 성을<br>차근차근 한 단계 한 단계<br>늘 겸손 하라 했지만<br>난 왕이 되고팠던 거야<br>욕심이 없다 했지만<br>난 정복을 원했던 거야<br><br>내 꿈의 성<br>먼 훗날 그곳을 위해서라면<br>나 외로워서 메말라버려도 좋아<br>내 꿈의 성<br>단 한 사람 내게 남아 준다면<br>그곳에서 우리 세상을 만들 거야<br><br>옳지 옳지 착하지<br>그것을 난 벗어야 했네<br>날 강하게 가둔 액자에서<br>그저 그런 사람에겐<br>관심이 점점 떨어지고<br>함께 갈 사람만 보이네<br>이웃을 사랑하고 싶어<br>하지만 그게 도대체가<br>난 정말 사랑을 알까<br>알고 싶기는 한 걸까<br><br>내 꿈의 성<br>먼 훗날 그곳을 위해서라면<br>나 외로워서 메말라버려도 좋아<br>내 꿈의 성<br>단 한 사람 내게 남아준다면<br>그곳에서 우리 세상을 만들 거야<br>내 꿈 내 꿈 내 꿈의 성<br>내 꿈 내 꿈 내 꿈의 성<br>쉬지 않고 달린 이유<br>숨겨왔던 내 욕심을 밝히고<br>난 떠날래 꿈속으로</div>";}
 		al9.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track10.play();
@@ -369,9 +373,8 @@
 		al10.onclick = function(){
 					track1.pause();track2.pause();track3.pause();track4.pause();track5.pause();track6.pause();track7.pause();track8.pause();track9.pause();track10.pause();track11.pause();
 					track11.play();
-					albumIntro.innerHTML = "<p id='colortext'>(11) 그 남자는 장례식에 축하와 환호성이 있기를 바랬다. 왜냐하면 그는 천국에 있을 것이기 때문에.</p><h1 id='songtitle'><span id='pointFont'>장례희망 (Funeral Hope)</span></h1><br><div id='column'>아는 얼굴 다 모였네 여기에<br>한 공간에 다 있는 게 신기해<br>모르는 사람이 계속 우는데<br>누군지 기억이 안 나 미안해<br>종종 상상했던 내 장례식엔<br>축하와 환호성 또 박수갈채가<br>있는 파티가 됐으면 했네<br>왜냐면 난 천국에 있기 때문에<br>오자마자 내 몸집에 서너 배<br>커다란 사자와 친구를 먹었네<br>땅 위에 단어들로는 표현 못 해<br>사진을 못 보내는 게 아쉽네<br><br>모두 여기서<br>다시 볼 거라는<br>확신이 있네<br>내 맘을 다 전하지<br>못한 게 아쉽네<br><br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>함께 일어나 춤을 추고 뛰며 찬양해<br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>큰 목소리로 기뻐 손뼉 치며 외치세<br><br>나와 그닥 뭐가 없던 여자의<br>슬픔이 좀 과하게 보이길래<br>놀랐네 돌이켜보니 그러게<br>우리도 미묘한 신호가 있긴 했네<br>머리를 쾅 한 대 맞은 듯하네<br>이제 머리는 없지만 알기 쉽게<br>모든 걸 알지 못했기 때문에<br>뭣 같고 즐거웠어 삶이란 게<br>한쪽엔 내가 생전 좋아했던<br>음식들이 놓였네 마치 뷔페<br>꾸준히 당부해 두길 잘했네<br>좋은 기억으로 남겨주길 바라<br><br>모두 여기서<br>다시 볼 거라는<br>확신이 있네<br>내 맘을 다 전하지<br>못한 게 아쉽네<br><br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>함께 일어나 춤을 추고 뛰며 찬양해<br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>큰 목소리로 기뻐 손뼉 치며 외치세</div>";}
+					albumIntro.innerHTML = "<p id='colortext'>(11) 그 남자는 장례식에 축하와 환호성이 있기를 바랬다. 왜냐하면 그는 천국에 있을 것이기 때문에.</p><h1 id='songtitle'>장례희망 <span id='pointFont'>(Funeral Hope)</span></h1><br><div id='column'>아는 얼굴 다 모였네 여기에<br>한 공간에 다 있는 게 신기해<br>모르는 사람이 계속 우는데<br>누군지 기억이 안 나 미안해<br>종종 상상했던 내 장례식엔<br>축하와 환호성 또 박수갈채가<br>있는 파티가 됐으면 했네<br>왜냐면 난 천국에 있기 때문에<br>오자마자 내 몸집에 서너 배<br>커다란 사자와 친구를 먹었네<br>땅 위에 단어들로는 표현 못 해<br>사진을 못 보내는 게 아쉽네<br><br>모두 여기서<br>다시 볼 거라는<br>확신이 있네<br>내 맘을 다 전하지<br>못한 게 아쉽네<br><br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>함께 일어나 춤을 추고 뛰며 찬양해<br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>큰 목소리로 기뻐 손뼉 치며 외치세<br><br>나와 그닥 뭐가 없던 여자의<br>슬픔이 좀 과하게 보이길래<br>놀랐네 돌이켜보니 그러게<br>우리도 미묘한 신호가 있긴 했네<br>머리를 쾅 한 대 맞은 듯하네<br>이제 머리는 없지만 알기 쉽게<br>모든 걸 알지 못했기 때문에<br>뭣 같고 즐거웠어 삶이란 게<br>한쪽엔 내가 생전 좋아했던<br>음식들이 놓였네 마치 뷔페<br>꾸준히 당부해 두길 잘했네<br>좋은 기억으로 남겨주길 바라<br><br>모두 여기서<br>다시 볼 거라는<br>확신이 있네<br>내 맘을 다 전하지<br>못한 게 아쉽네<br><br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>함께 일어나 춤을 추고 뛰며 찬양해<br>할렐루야<br>꿈의 왕국에 입성한 아들을 위해<br>할렐루야<br>큰 목소리로 기뻐 손뼉 치며 외치세</div>";}
 
-        
         
 		bhTicker("ticker",2);
 
